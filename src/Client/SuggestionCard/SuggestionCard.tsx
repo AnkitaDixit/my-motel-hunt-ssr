@@ -9,7 +9,6 @@ interface SuggestionProps {
 }
 
 const openNewTab = (suggestion: any) => {
-  console.log(suggestion)
   const url = `/details?value=${encodeURIComponent(suggestion.place_id)}`;
   const newTab = window.open(url, '_blank');
   newTab?.focus();

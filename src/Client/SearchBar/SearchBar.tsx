@@ -23,7 +23,6 @@ const SearchBar: React.FC = () => {
       const getLodging = getLodgingSuggestions({ input: newValue })
       Promise.all([getLocality, getLodging])
         .then((data: any[]) => {
-          console.log(data)
           setPlaceSuggestions(data[0])
           setLodgignSuggestions(data[1])
         })
